@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>معقم وموزع معجون الأسنان الذكي - متجر الشامل YA</title>
+<style>
+:root{--primary:#007bff;--accent:#28a745;--bg:#f8f9fa}
+body{font-family:system-ui,Tahoma;background:var(--bg);margin:0;line-height:1.6}
+.container{max-width:850px;margin:0 auto;background:#fff;padding:0 0 20px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,.1);overflow:hidden}
+.hero{background:linear-gradient(135deg,#111,#333);color:#fff;padding:20px;text-align:center}
+.hero h1{font-size:1.6rem;margin:0}
+.price-tag{text-align:center;margin:15px 0} .current-price{color:var(--accent);font-weight:bold;font-size:2.2rem} .old-price{text-decoration:line-through;color:#888;margin-left:10px}
+.gallery-section{margin:20px;padding:0 15px} .gallery-section h3{border-bottom:3px solid var(--primary);padding-bottom:8px}
+.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.media-grid img, .media-grid video{width:100%;height:200px;object-fit:cover;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.features{background:#eef6ff;padding:15px;border-radius:10px;margin:20px}
+.features li{margin-bottom:8px}
+.order-form{border:2px solid var(--primary);padding:20px;border-radius:12px;margin:20px}
+.form-group{margin-bottom:14px} .form-group label{display:block;font-weight:bold;margin-bottom:5px}
+.form-group input, .form-group select{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:1rem;box-sizing:border-box}
+.summary-box{background:#f1f1f1;padding:15px;border-radius:8px;margin-top:15px}
+.btn-submit{background:var(--accent);color:#fff;border:none;width:100%;padding:16px;font-size:1.3rem;font-weight:bold;border-radius:10px;cursor:pointer}
+.btn-submit:hover{background:#218838} .guarantees{display:flex;justify-content:space-around;margin:20px 10px;text-align:center;font-size:.9rem}
+.badge{background:#dc3545;color:#fff;padding:4px 12px;border-radius:20px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="hero">
+<span class="badge">Anderson Batna - دفع عند الاستلام</span>
+<h1>🪥 معقم وموزع معجون الأسنان الذكي UV</h1>
+<p>يقتل 99.9% بكتيريا - 58 ولاية</p>
+</div>
+
+<div class="price-tag">
+<span class="old-price">3900 دج</span>
+<span class="current-price">2500 دج</span>
+<div style="font-size:13px;color:#666">+ مصاريف التوصيل حسب الولاية</div>
+</div>
+
+<div class="gallery-section">
+<h3>🎬 شاهد المنتج (من الفيديو تاعك)</h3>
+<div class="media-grid">
+<img src="frame_1.jpg" alt="تحذير بكتيريا">
+<img src="frame_2.jpg" alt="UV">
+<img src="frame_4.jpg" alt="تعقيم">
+<img src="frame_5.jpg" alt="تركيب">
+<img src="frame_8.jpg" alt="كارت YA">
+</div>
+<p style="font-size:12px;color:#888;text-align:center;margin-top:8px">الصور مأخوذة من الفيديو الأصلي تاعك</p>
+</div>
+
+<div class="gallery-section">
+<h3>🎥 فيديوهات قصيرة للزبون</h3>
+<div class="media-grid">
+<video controls><source src="clip_hook.mp4" type="video/mp4"></video>
+<video controls><source src="clip_product.mp4" type="video/mp4"></video>
+<video controls><source src="clip_install.mp4" type="video/mp4"></video>
+<video controls><source src="clip_final.mp4" type="video/mp4"></video>
+</div>
+</div>
+
+<div class="features">
+<h3>✨ لماذا YA الشامل؟</h3>
+<ul style="list-style:none;padding:0">
+<li>✅ تعقيم 99.9% بتقنية UV</li>
+<li>✅ موزع معجون أوتوماتيكي</li>
+<li>✅ شحن بالضوء + USB</li>
+<li>✅ تركيب بدون تثقيب - دوبل فاص قوي</li>
+<li>✅ توصيل 58 ولاية Anderson</li>
+</ul>
+</div>
+
+<div class="order-form">
+<h2 style="text-align:center;color:var(--primary);margin-top:0">اطلب الآن - الدفع عند الاستلام</h2>
+<form id="checkoutForm" onsubmit="return orderWA(event)">
+<div class="form-group"><label>الاسم الكامل:</label><input id="cName" type="text" required placeholder="اسمك"></div>
+<div class="form-group"><label>رقم الهاتف:</label><input id="cPhone" type="tel" required placeholder="06XXXXXXXX"></div>
+<div class="form-group"><label>الولاية (أوتوماتيك):</label><select id="wilayaSelect" onchange="updateShipping()" required>
+<option value="">اختر الولاية...</option>
+<option value="أدرار" data-home="1500" data-desk="750">أدرار - توصيل منزل 1500 دج / مكتب 750 دج</option>
+<option value="أم البواقي" data-home="750" data-desk="450">أم البواقي - توصيل منزل 750 دج / مكتب 450 دج</option>
+<option value="أولاد جلال" data-home="950" data-desk="500">أولاد جلال - توصيل منزل 950 دج / مكتب 500 دج</option>
+<option value="إليزي" data-home="1700" data-desk="750">إليزي - توصيل منزل 1700 دج / مكتب 750 دج</option>
+<option value="إن صالح" data-home="1500" data-desk="750">إن صالح - توصيل منزل 1500 دج / مكتب 750 دج</option>
+<option value="إن قزام" data-home="1550" data-desk="0">إن قزام - توصيل منزل 1550 دج / مكتب غير متوفر دج</option>
+<option value="الأغواط" data-home="1000" data-desk="500">الأغواط - توصيل منزل 1000 دج / مكتب 500 دج</option>
+<option value="البليدة" data-home="700" data-desk="450">البليدة - توصيل منزل 700 دج / مكتب 450 دج</option>
+<option value="البويرة" data-home="900" data-desk="450">البويرة - توصيل منزل 900 دج / مكتب 450 دج</option>
+<option value="البيض" data-home="1150" data-desk="600">البيض - توصيل منزل 1150 دج / مكتب 600 دج</option>
+<option value="الجزائر" data-home="700" data-desk="450">الجزائر - توصيل منزل 700 دج / مكتب 450 دج</option>
+<option value="الجلفة" data-home="1050" data-desk="600">الجلفة - توصيل منزل 1050 دج / مكتب 600 دج</option>
+<option value="الشلف" data-home="900" data-desk="450">الشلف - توصيل منزل 900 دج / مكتب 450 دج</option>
+<option value="الطارف" data-home="750" data-desk="450">الطارف - توصيل منزل 750 دج / مكتب 450 دج</option>
+<option value="المدية" data-home="800" data-desk="450">المدية - توصيل منزل 800 دج / مكتب 450 دج</option>
+<option value="المسيلة" data-home="800" data-desk="450">المسيلة - توصيل منزل 800 دج / مكتب 450 دج</option>
+<option value="المغير" data-home="900" data-desk="0">المغير - توصيل منزل 900 دج / مكتب غير متوفر دج</option>
+<option value="المنيعة" data-home="1000" data-desk="600">المنيعة - توصيل منزل 1000 دج / مكتب 600 دج</option>
+<option value="النعامة" data-home="1050" data-desk="500">النعامة - توصيل منزل 1050 دج / مكتب 500 دج</option>
+<option value="الوادي" data-home="900" data-desk="500">الوادي - توصيل منزل 900 دج / مكتب 500 دج</option>
+<option value="باتنة" data-home="450" data-desk="300">باتنة - توصيل منزل 450 دج / مكتب 300 دج</option>
+<option value="بجاية" data-home="800" data-desk="450">بجاية - توصيل منزل 800 دج / مكتب 450 دج</option>
+<option value="برج باجي مختار" data-home="1500" data-desk="0">برج باجي مختار - توصيل منزل 1500 دج / مكتب غير متوفر دج</option>
+<option value="برج بوعريريج" data-home="700" data-desk="450">برج بوعريريج - توصيل منزل 700 دج / مكتب 450 دج</option>
+<option value="بسكرة" data-home="750" data-desk="450">بسكرة - توصيل منزل 750 دج / مكتب 450 دج</option>
+<option value="بشار" data-home="1000" data-desk="500">بشار - توصيل منزل 1000 دج / مكتب 500 دج</option>
+<option value="بني عباس" data-home="1000" data-desk="0">بني عباس - توصيل منزل 1000 دج / مكتب غير متوفر دج</option>
+<option value="بومرداس" data-home="700" data-desk="450">بومرداس - توصيل منزل 700 دج / مكتب 450 دج</option>
+<option value="تبسة" data-home="900" data-desk="450">تبسة - توصيل منزل 900 دج / مكتب 450 دج</option>
+<option value="تقرت" data-home="900" data-desk="500">تقرت - توصيل منزل 900 دج / مكتب 500 دج</option>
+<option value="تلمسان" data-home="950" data-desk="450">تلمسان - توصيل منزل 950 دج / مكتب 450 دج</option>
+<option value="تمنراست" data-home="1700" data-desk="800">تمنراست - توصيل منزل 1700 دج / مكتب 800 دج</option>
+<option value="تندوف" data-home="1700" data-desk="0">تندوف - توصيل منزل 1700 دج / مكتب غير متوفر دج</option>
+<option value="تيارت" data-home="950" data-desk="450">تيارت - توصيل منزل 950 دج / مكتب 450 دج</option>
+<option value="تيبازة" data-home="850" data-desk="450">تيبازة - توصيل منزل 850 دج / مكتب 450 دج</option>
+<option value="تيزي وزو" data-home="700" data-desk="450">تيزي وزو - توصيل منزل 700 دج / مكتب 450 دج</option>
+<option value="تيسمسيلت" data-home="800" data-desk="450">تيسمسيلت - توصيل منزل 800 دج / مكتب 450 دج</option>
+<option value="تيميمون" data-home="1400" data-desk="0">تيميمون - توصيل منزل 1400 دج / مكتب غير متوفر دج</option>
+<option value="جانت" data-home="1600" data-desk="750">جانت - توصيل منزل 1600 دج / مكتب 750 دج</option>
+<option value="جيجل" data-home="800" data-desk="450">جيجل - توصيل منزل 800 دج / مكتب 450 دج</option>
+<option value="خنشلة" data-home="600" data-desk="450">خنشلة - توصيل منزل 600 دج / مكتب 450 دج</option>
+<option value="سطيف" data-home="700" data-desk="450">سطيف - توصيل منزل 700 دج / مكتب 450 دج</option>
+<option value="سعيدة" data-home="900" data-desk="500">سعيدة - توصيل منزل 900 دج / مكتب 500 دج</option>
+<option value="سكيكدة" data-home="750" data-desk="450">سكيكدة - توصيل منزل 750 دج / مكتب 450 دج</option>
+<option value="سوق أهراس" data-home="700" data-desk="450">سوق أهراس - توصيل منزل 700 دج / مكتب 450 دج</option>
+<option value="سيدي بلعباس" data-home="800" data-desk="450">سيدي بلعباس - توصيل منزل 800 دج / مكتب 450 دج</option>
+<option value="عنابة" data-home="750" data-desk="450">عنابة - توصيل منزل 750 دج / مكتب 450 دج</option>
+<option value="عين الدفلى" data-home="800" data-desk="450">عين الدفلى - توصيل منزل 800 دج / مكتب 450 دج</option>
+<option value="عين تموشنت" data-home="800" data-desk="450">عين تموشنت - توصيل منزل 800 دج / مكتب 450 دج</option>
+<option value="غرداية" data-home="950" data-desk="600">غرداية - توصيل منزل 950 دج / مكتب 600 دج</option>
+<option value="غليزان" data-home="800" data-desk="500">غليزان - توصيل منزل 800 دج / مكتب 500 دج</option>
+<option value="قالمة" data-home="750" data-desk="450">قالمة - توصيل منزل 750 دج / مكتب 450 دج</option>
+<option value="قسنطينة" data-home="700" data-desk="450">قسنطينة - توصيل منزل 700 دج / مكتب 450 دج</option>
+<option value="مستغانم" data-home="800" data-desk="450">مستغانم - توصيل منزل 800 دج / مكتب 450 دج</option>
+<option value="معسكر" data-home="800" data-desk="450">معسكر - توصيل منزل 800 دج / مكتب 450 دج</option>
+<option value="ميلة" data-home="700" data-desk="450">ميلة - توصيل منزل 700 دج / مكتب 450 دج</option>
+<option value="ورقلة" data-home="900" data-desk="450">ورقلة - توصيل منزل 900 دج / مكتب 450 دج</option>
+<option value="وهران" data-home="800" data-desk="450">وهران - توصيل منزل 800 دج / مكتب 450 دج</option>
+
+</select></div>
+<div class="form-group"><label>نوع التوصيل:</label><select id="deliveryType" onchange="updateShipping()" required>
+<option value="home">للمنزل - A Domicile</option>
+<option value="desk">للمكتب - Stop Desk</option>
+</select></div>
+<div class="form-group"><label>العنوان / البلدية:</label><input id="cAddr" type="text" placeholder="مثال: حي النصر"></div>
+
+<div class="summary-box">
+<p>سعر المنتج: <b>2500 دج</b></p>
+<p>مصاريف التوصيل: <b id="shippingPrice">اختر الولاية</b></p>
+<p id="deskNote" style="font-size:12px;color:#d97706;display:none">⚠️ هذه الولاية لا يوجد توصيل مكتب - سيتم التوصيل للمنزل</p>
+<hr>
+<p style="font-size:1.3rem;margin:0">المجموع: <b id="totalPrice" style="color:var(--accent)">2500 دج</b></p>
+</div>
+<br>
+<button type="submit" class="btn-submit">🛒 تأكيد عبر واتساب - Anderson</button>
+</form>
+</div>
+
+<div class="guarantees">
+<div>📦 دفع عند الاستلام</div><div>🔍 افحص قبل الدفع</div><div>🔄 إرجاع 50 دج فقط</div>
+</div>
+</div>
+<script>
+function updateShipping(){
+ const sel=document.getElementById('wilayaSelect');
+ const type=document.getElementById('deliveryType').value;
+ const opt=sel.options[sel.selectedIndex];
+ if(!opt||!opt.value){document.getElementById('shippingPrice').innerText='اختر الولاية';return;}
+ let cost=parseInt(opt.getAttribute('data-'+type))||0;
+ const note=document.getElementById('deskNote');
+ if(type==='desk' && cost===0){ 
+   cost=parseInt(opt.getAttribute('data-home'))||0;
+   note.style.display='block';
+   document.getElementById('deliveryType').value='home';
+ } else { note.style.display='none'; }
+ const total=2500+cost;
+ document.getElementById('shippingPrice').innerText=cost+' دج';
+ document.getElementById('totalPrice').innerText=total+' دج';
+}
+function orderWA(e){
+ e.preventDefault();
+ const w=document.getElementById('wilayaSelect').value;
+ if(!w){alert('اختر الولاية!');return false;}
+ const name=document.getElementById('cName').value;
+ const phone=document.getElementById('cPhone').value;
+ const addr=document.getElementById('cAddr').value;
+ const ship=document.getElementById('shippingPrice').innerText;
+ const total=document.getElementById('totalPrice').innerText;
+ const msg=`سلام YA الشامل%0Aطلب جديد:%0Aالاسم: ${name}%0Aالهاتف: ${phone}%0Aالولاية: ${w}%0Aالعنوان: ${addr}%0Aالتوصيل: ${ship}%0Aالمجموع: ${total}%0A%0AAnderson`;
+ const url=`https://wa.me/213659596907?text=${msg}`;
+ window.open(url,'_blank');
+ return false;
+}
+</script>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+</html>
+
