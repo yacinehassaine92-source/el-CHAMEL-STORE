@@ -69,7 +69,8 @@ body{font-family:system-ui,Tahoma;background:var(--bg);margin:0;line-height:1.6}
 
 <div class="order-form">
 <h2 style="text-align:center;color:var(--primary);margin-top:0">اطلب الآن - الدفع عند الاستلام</h2>
-<form id="checkoutForm" onsubmit="return orderWA(event)">
+<form id="checkoutForm">
+
 <div class="form-group"><label>الاسم الكامل:</label><input id="cName" type="text" required placeholder="اسمك"></div>
 <div class="form-group"><label>رقم الهاتف:</label><input id="cPhone" type="tel" required placeholder="06XXXXXXXX"></div>
 <div class="form-group"><label>الولاية (أوتوماتيك):</label><select id="wilayaSelect" onchange="updateShipping()" required>
@@ -187,6 +188,61 @@ function orderWA(e){
  return false;
 }
 </script>
+ <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbypLFRA36B1Ry62Ls0X2KfL40HdEi5kuCWVpNPzNVw7JeefRGFRaBB4-gU6hXOXZ18L/exec';
+
+  const checkoutForm = document.getElementById('checkoutForm');
+
+  checkoutForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const submitBtn = checkoutForm.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'جاري تسجيل طلبك...';
+    }
+
+    // جلب الحقول من النموذج
+    const textInputs = checkoutForm.querySelectorAll('input[type="text"]');
+    const phoneInput = checkoutForm.querySelector('input[type="tel"]') || textInputs[1];
+    const nameInput = textInputs[0];
+    const addressInput = textInputs[textInputs.length - 1];
+    const wilayaSelect = checkoutForm.querySelector('select');
+
+    const orderData = {
+      product: "معقم وموزع معجون الأسنان الذكي UV",
+      name: nameInput ? nameInput.value : '',
+      phone: phoneInput ? phoneInput.value : '',
+      wilaya: wilayaSelect ? wilayaSelect.value : '',
+      address: addressInput ? addressInput.value : '',
+      price: "2500 دج"
+    };
+
+    fetch(scriptURL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(orderData)
+    })
+    .then(() => {
+      alert('تم تسجيل طلبك بنجاح! سنتصل بك قريباً لتأكيد التوصيل.');
+      checkoutForm.reset();
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'تأكيد الطلب';
+      }
+    })
+    .catch(error => {
+      console.error('Error!', error);
+      alert('حدث خطأ أثناء إرسال الطلب، يرجى المحاولة مرة أخرى.');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'تأكيد الطلب';
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
 
